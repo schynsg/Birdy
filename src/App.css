@@ -1,0 +1,144 @@
+/** RESET **/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+a{
+    text-decoration: none;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/** Let's Go ! **/
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+html{
+    background-color: #435468;
+    color: #B8B8B8;
+    width: 95%;
+    margin: 0 auto;
+    max-width: 700px;
+    font-family: 'Rubik', sans-serif;
+}
+
+header{
+    text-align: center;
+}
+
+header img{
+    max-width: 150px;
+    margin: 20px auto 0;
+}
+
+header.welcome_header img{
+    max-width: 300px;
+    margin: 40px auto 0;
+}
+
+.links{
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    max-width: 300px;
+    margin: 25px auto;
+    background-color: #FE8979;
+    color: #435468;
+    border-radius: 5px;
+    font-size: 1.2em;
+    line-height: 19px;
+    text-align: center;
+    border: 0 transparent;
+    cursor: pointer;
+}
+
+a.links.secondary{
+    background-color: #B8B8B8;
+}
+
+/* Landing page */
+
+.landing_page .account_links{
+    text-align: center;
+    margin-top: 100px;
+}
+
+
+/* Login page, Signin page */
+
+.login_form, .signin_form{
+     margin-top: 75px;
+}
+
+.login_form label, .signin_form label{
+     display: none;
+}
+
+.login_form input:not([type=submit]), .signin_form input:not([type=submit]){
+    color: #B8B8B8;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #B8B8B8;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 25px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.login_form input:not([type=submit])::placeholder, .signin_form input:not([type=submit])::placeholder{
+    color: #B8B8B8;
+}
+
+/* 404 */
+
+.error404{
+    text-align: center;
+    font-size: 4em;
+    margin: 40px 0;
+    font-weight: 500;
+}

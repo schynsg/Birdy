@@ -1,9 +1,10 @@
 import React from 'react';
+import logo from "../../images/birdy.svg"
 
 const Header = () => {
     return (
         <header>
-            <h1><a href="/" title="Accueil">Birdy</a></h1>
+            <h1><a href="/home" title="Accueil"><img src={logo} alt="Birdy"/></a></h1>
         </header>
     )
 }
