@@ -1,8 +1,10 @@
 import React from 'react'
+import Logout from "../Logout";
 
 const Welcome = () => {
     return (
         <div>
+            <Logout/>
             <div className="menu">
                 <a href="/report" className="links" title="Ajouter une capture">Signaler une capture</a>
                 <a href="/encyclopedia" className="links" title="Parcourir l'encyclopédie">Encyclopédie</a>

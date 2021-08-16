@@ -25,7 +25,7 @@ class Firebase {
         this.auth.signInWithEmailAndPassword(email, password);
 
     //Déconnexion
-    signoutUser = () =>
+    logoutUser = () =>
         this.auth.signOut();
 }
 
