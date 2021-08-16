@@ -25,9 +25,18 @@ const Signin = (props) => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        const {email, pass} = loginData;
+        const {idisn, name, address, city, email, pass, repass} = loginData;
         firebase.signupUser(email, pass)
-            .then(user => {
+            .then(authUser => {
+                return firebase.user(authUser.user.uid).set({
+                    idisn,
+                    name,
+                    address,
+                    city,
+                    email
+                })
+            })
+            .then(() => {
                 setLoginData({...data});
                 props.history.push('/home');
             })
