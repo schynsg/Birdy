@@ -59,7 +59,7 @@ const Signin = (props) => {
                     <label htmlFor="city">Ville</label>
                     <input onChange={handleChange} value={city} type="text" name="city" id="city" placeholder="Ville" required/>
                     <label htmlFor="email">Adresse e-mail</label>
-                    <input onChange={handleChange} value={email} type="text" name="email" id="email" placeholder="Adresse e-mail" required/>
+                    <input onChange={handleChange} value={email} type="email" name="email" id="email" placeholder="Adresse e-mail" required/>
                     <label htmlFor="pass">Mot de passe</label>
                     <input onChange={handleChange} value={pass} type="password" name="pass" id="pass" placeholder="Mot de passe" required/>
                     <label htmlFor="repass">Confirmez votre mot de passe</label>
