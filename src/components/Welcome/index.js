@@ -1,8 +1,28 @@
-import React from 'react'
+import React, { useState, useContext, useEffect } from 'react'
+import { FirebaseContext } from "../Firebase";
 import Logout from "../Logout";
 
-const Welcome = () => {
-    return (
+const Welcome = props => {
+
+    const firebase = useContext(FirebaseContext);
+
+    const [userSession, setUserSession] = useState(null);
+
+    useEffect(() => {
+
+        let listener = firebase.auth.onAuthStateChanged(user => {
+            user ? setUserSession(user) : props.history.push('/');
+        })
+
+        return () => {
+            listener()
+        };
+    }, []);
+    
+
+    return userSession === null ? (
+        <div className="loading_div">Chargement ...</div>
+    ) : (
         <div>
             <Logout/>
             <div className="menu">
