@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { FirebaseContext } from "../Firebase";
+import logout from "../../images/logout.svg";
 
 const Logout = (props) => {
 
@@ -11,8 +12,10 @@ const Logout = (props) => {
     }
     
     return (
-        <div>
-            <a onClick={handleLogout} href="#" title="Se déconnecter">Déconnexion</a>
+        <div className="logout">
+            <a onClick={handleLogout} href="#" title="Se déconnecter">
+                <img src={logout} alt="Déconnexion"/>
+            </a>
         </div>
     )
 }

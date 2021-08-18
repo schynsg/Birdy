@@ -98,6 +98,22 @@ a.links.secondary{
     background-color: #B8B8B8;
 }
 
+/* LOGOUT */
+
+.logout{
+    background-color: #FE8979;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 3px 5px 1px 3px;
+    position: relative;
+    top: -42px;
+}
+
+.logout img{
+    width: 25px;
+    height: 25px;
+}
+
 /* Landing page */
 
 .landing_page .account_links{
