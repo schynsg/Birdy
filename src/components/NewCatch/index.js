@@ -1,5 +1,4 @@
-import React, {useContext, useState} from 'react';
-import Logout from "../Logout";
+import React, {useContext, useEffect, useState} from 'react';
 import firebase from "firebase";
 
 const NewCatch = (props) => {
@@ -49,7 +48,6 @@ const NewCatch = (props) => {
 
     return (
         <div>
-            <Logout/>
             <h2 className="new-catch_title">Signaler une capture</h2>
             <p className="intro">Veuillez nous fournir les informations relatives à cette capture</p>
             {errorMessage}

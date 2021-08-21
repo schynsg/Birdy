@@ -7,6 +7,7 @@ import Welcome from "../Welcome";
 import Login from "../Login";
 import Signin from "../Signin";
 import NewCatch from "../NewCatch";
+import Users from "../Users";
 import ErrorPage from "../Errorpage";
 import '../../App.css';
 
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/login" component={Login}/>
                 <Route path="/signin" component={Signin}/>
                 <Route path="/new-catch" component={NewCatch}/>
+                <Route path="/users" component={Users}/>
                 <Route component={ErrorPage}/>
             </Switch>
 
