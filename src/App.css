@@ -159,9 +159,9 @@ a.links.secondary{
     font-weight: 500;
 }
 
-/* NEW CATCH */
+/* NEW CATCH, USERS */
 
-.new-catch_title{
+.new-catch_title, .users_title{
     text-align: center;
     font-size: 1.5em;
     margin: 30px 0 10px;
@@ -213,4 +213,31 @@ a.links.secondary{
 .question .links:disabled{
     opacity: 0.4;
     cursor: not-allowed;
+}
+
+.user{
+    background-color: #B8B8B8;
+    color: #435468;
+    padding: 10px;
+    position: relative;
+}
+
+.user p:first-of-type{
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.user a{
+    position: absolute;
+    right: 10px;
+    top: 14px;
+    background-color: #435468;
+    color: #B8B8B8;
+    padding: 10px 0;
+    width: 150px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    text-align: center;
+    cursor: pointer;
+    line-height: 17px;
 }
