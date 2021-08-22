@@ -7,6 +7,8 @@ import Welcome from "../Welcome";
 import Login from "../Login";
 import Signin from "../Signin";
 import NewCatch from "../NewCatch";
+import NewBird from "../NewBird";
+import NewCatchSuccess from "../NewCatch/success";
 import Users from "../Users";
 import ErrorPage from "../Errorpage";
 import '../../App.css';
@@ -25,6 +27,8 @@ function App() {
                 <Route path="/login" component={Login}/>
                 <Route path="/signin" component={Signin}/>
                 <Route path="/new-catch" component={NewCatch}/>
+                <Route path="/new-bird" component={NewBird}/>
+                <Route path="/new-catch-success" component={NewCatchSuccess}/>
                 <Route path="/users" component={Users}/>
                 <Route component={ErrorPage}/>
             </Switch>

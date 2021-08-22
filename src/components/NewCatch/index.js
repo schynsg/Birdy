@@ -34,7 +34,7 @@ const NewCatch = (props) => {
                     user_id
                 }).then(() => {
                     setNewCatchData({...data});
-                    props.history.push('/home');
+                    props.history.push('/new-bird?ring='+ring);
                 }).catch(error => {
                     setError(error);
                     setNewCatchData({...data});

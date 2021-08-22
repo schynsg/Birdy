@@ -210,6 +210,27 @@ a.links.secondary{
     border: none;
 }
 
+.question input[type="number"] {
+    width: 100%;
+    background-color: #ededed;
+    color: #22456e;
+    font-size: 20px;
+    margin: 20px 0 50px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border: none;
+}
+
+.question input[type="range"] {
+    width: 100%;
+    background-color: #ededed;
+    color: #22456e;
+    font-size: 20px;
+    margin: 20px 0 50px;
+    box-sizing: border-box;
+    border: none;
+}
+
 .question .links:disabled{
     opacity: 0.4;
     cursor: not-allowed;
