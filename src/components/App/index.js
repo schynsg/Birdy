@@ -8,6 +8,7 @@ import Login from "../Login";
 import Signin from "../Signin";
 import NewCatch from "../NewCatch";
 import NewBird from "../NewBird";
+import ModifyBird from "../ModifyBird";
 import NewCatchSuccess from "../NewCatch/success";
 import Users from "../Users";
 import ErrorPage from "../Errorpage";
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/signin" component={Signin}/>
                 <Route path="/new-catch" component={NewCatch}/>
                 <Route path="/new-bird" component={NewBird}/>
+                <Route path="/modify-bird/:birdRing" component={ModifyBird}/>
                 <Route path="/new-catch-success" component={NewCatchSuccess}/>
                 <Route path="/users" component={Users}/>
                 <Route component={ErrorPage}/>

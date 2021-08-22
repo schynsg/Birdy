@@ -49,7 +49,7 @@ class Users extends React.Component {
                 <div className="user" key={i}>
                     <p>{user.name}</p>
                     <p>{user.city} - {user.catchesCount} capture</p>
-                    <a href="#">En savoir plus</a>
+                    <a href={"mailto:"+user.email}>Contacter</a>
                 </div>
             )
         })
