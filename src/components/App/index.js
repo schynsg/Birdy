@@ -29,7 +29,7 @@ function App() {
                 <Route path="/signin" component={Signin}/>
                 <Route path="/new-catch" component={NewCatch}/>
                 <Route path="/new-bird" component={NewBird}/>
-                <Route path="/modify-bird/:birdRing" component={ModifyBird}/>
+                <Route path="/modify-bird/:id" component={ModifyBird}/>
                 <Route path="/new-catch-success" component={NewCatchSuccess}/>
                 <Route path="/users" component={Users}/>
                 <Route component={ErrorPage}/>
