@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { FirebaseContext } from "../Firebase";
+import Logout from "../Logout";
 
 const Welcome = props => {
 
@@ -23,6 +24,7 @@ const Welcome = props => {
         <div className="loading_div">Chargement ...</div>
     ) : (
         <div>
+            <Logout/>
             <div className="menu">
                 <a href="/new-catch" className="links" title="Ajouter une capture">Signaler une capture</a>
                 <a href="/encyclopedia" className="links" title="Parcourir l'encyclopédie">Encyclopédie</a>
