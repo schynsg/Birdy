@@ -15,25 +15,27 @@ class ModifyBird extends Component {
     };
 
     componentDidMount() {
-        const ref = firebase.firestore().collection("birds").doc(this.props.match.params.id);
-        ref.get().then((doc) => {
-            this.setState({
-                capture: doc.data()
-            });
-            const ring = this.state.capture.ring;
-            this.setState({ring: ring});
-            const bird_type = this.state.capture.bird_type;
-            this.setState({bird_type: bird_type});
-            const length = this.state.capture.length;
-            this.setState({length: length});
-            const weight = this.state.capture.weight;
-            this.setState({weight: weight});
-            const fat = this.state.capture.fat;
-            this.setState({fat: fat});
-            const sex = this.state.capture.sex;
-            this.setState({sex: sex});
-            const age = this.state.capture.age;
-            this.setState({age: age});
+        const ref = firebase.firestore().collection("birds").where("ring", "==", this.props.match.params.ring);
+        ref.get().then((snapchot) => {
+            snapchot.forEach(doc => {
+                this.setState({
+                    capture: doc.data()
+                });
+                const ring = this.state.capture.ring;
+                this.setState({ring: ring});
+                const bird_type = this.state.capture.bird_type;
+                this.setState({bird_type: bird_type});
+                const length = this.state.capture.length;
+                this.setState({length: length});
+                const weight = this.state.capture.weight;
+                this.setState({weight: weight});
+                const fat = this.state.capture.fat;
+                this.setState({fat: fat});
+                const sex = this.state.capture.sex;
+                this.setState({sex: sex});
+                const age = this.state.capture.age;
+                this.setState({age: age});
+            })
         });
     };
 
@@ -63,20 +65,26 @@ class ModifyBird extends Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        firebase.firestore().collection('birds').doc(this.props.match.params.id).update({
-            ring: this.state.ring,
-            bird_type: this.state.bird_type,
-            length: this.state.length,
-            weight: this.state.weight,
-            fat: this.state.fat,
-            sex: this.state.sex,
-            age : this.state.age
-        }).then(() => {
-            this.setState({modified: true});
-            this.props.history.push('/new-catch-success');
-        }).catch(error => {
-            console.log(error);
-        })
+        firebase.firestore().collection('birds').where("ring", "==", this.props.match.params.ring)
+            .get()
+            .then((snapchot) => {
+                snapchot.forEach(item =>{
+                    firebase.firestore().collection('birds').doc(item.id).update({
+                        ring: this.state.ring,
+                        bird_type: this.state.bird_type,
+                        length: this.state.length,
+                        weight: this.state.weight,
+                        fat: this.state.fat,
+                        sex: this.state.sex,
+                        age : this.state.age
+                    }).then(() => {
+                        this.setState({modified: true});
+                        this.props.history.push('/new-catch-success');
+                    }).catch(error => {
+                        console.log(error);
+                    })
+                })
+            })
     }
 
 

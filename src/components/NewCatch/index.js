@@ -34,7 +34,19 @@ const NewCatch = (props) => {
                     user_id
                 }).then(() => {
                     setNewCatchData({...data});
-                    props.history.push('/new-bird?ring='+ring);
+
+                    const birdsRef = firebase.firestore().collection('birds').where('ring', '==', ring);
+                    birdsRef.get()
+                        .then((docSnapshot) => {
+                            if (!docSnapshot.empty) {
+                                docSnapshot.forEach(doc => {
+                                    //console.log(doc.data().ring);
+                                    props.history.push('/modify-bird/'+doc.data().ring);
+                                })
+                            } else {
+                                props.history.push('/new-bird?ring='+ring);
+                            }
+                        });
                 }).catch(error => {
                     setError(error);
                     setNewCatchData({...data});
