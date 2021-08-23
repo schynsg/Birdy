@@ -46,7 +46,7 @@ class Users extends React.Component {
         const displayUsers = this.state.users && this.state.users.map((user, i) => {
 
             return (
-                <div className="user" key={i}>
+                <div className="item" key={i}>
                     <p>{user.name}</p>
                     <p>{user.city} - {user.catchesCount} capture</p>
                     <a href={"mailto:"+user.email}>Contacter</a>
