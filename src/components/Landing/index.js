@@ -8,6 +8,7 @@ const Landing = () => {
                 <div className="account_links">
                     <Link to="/login" title="Se connecter" className="links">Connexion</Link>
                     <Link to="/signin" title="Créer un compte" className="links secondary">Inscription</Link>
+                    <p>Test</p>
                 </div>
             </div>
         </main>
