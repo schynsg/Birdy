@@ -42,9 +42,6 @@ class BirdsTypesList extends React.Component {
             <div>
                 <h2 className="users_title">Encyclopédie</h2>
                 <p className="intro">Vous trouverez ici tous les oiseaux</p>
-                <div className="searchBar">
-                    <input type="text" placeholder="Rechercher"/>
-                </div>
                 {displayBirdsTypes}
             </div>
         )
